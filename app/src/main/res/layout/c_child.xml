@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <CheckBox
+        android:id="@+id/c_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+<com.facebook.drawee.view.SimpleDraweeView
+    android:id="@+id/c_img"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    fresco:roundAsCircle="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="100dp">
+        <TextView
+            android:id="@+id/c_name"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名字"/>
+        <TextView
+            android:id="@+id/c_price"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格"/>
+    </LinearLayout>
+</LinearLayout>

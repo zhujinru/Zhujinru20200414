@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.bw.zhujinru20200414"
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //Gson包
+    implementation 'com.google.code.gson:gson:2.4'
+    //如果是adnroidx的话需要依赖
+    implementation 'com.google.android.material:material:1.0.0'
+    //butterknife依赖
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    //Okhttp依赖
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+//Okhttp日志拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //retrofit2.0依赖
+    implementation 'com.squareup.retrofit2:retrofit:+'
+//让retrofit支持Gson自动解析json
+    implementation 'com.squareup.retrofit2:converter-gson:+'
+//让retrofit支持Rxjava2
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:+'
+
+//Rxjava依赖
+    implementation 'io.reactivex.rxjava2:rxjava:+'
+    implementation 'io.reactivex.rxjava2:rxandroid:+'
+    implementation 'com.facebook.fresco:fresco:1.12.0'
+    /*布局加入 xmlns:fresco="http://schemas.android.com/apk/res-auto"
+
+    SimpleDraweeView
+    fresco:placeholderImage="@mipmap/ic_launcher"*/
+    /* fresco:roundAsCircle="true"
+    Uri parse = Uri.parse(cartlistBean.getDefaultPic());
+    childViewHolder.chIv.setImageURI(parse);
+
+    ^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$*/
+}
