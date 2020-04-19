@@ -1,6 +1,7 @@
 package com.bw.zhujinru20200414.view.activity;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -67,7 +68,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        Toast.makeText(this, "嘎嘎嘎", Toast.LENGTH_SHORT).show();
     }
 
     @Override
